@@ -1,0 +1,34 @@
+<!-- Title : Create a page to test addEventListener with arrow function  -->
+<!-- Description : Take the input from the user.
+                  when he press the submit button input should be
+                printed on the console as well as on the screen -->
+<!-- Author : Pooja D S-->
+<!-- Date : 24/03/2021  -->
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns="5">
+<head >
+  <title>Program1</title>
+</head>
+<body>
+  <h1 style="text-align: left;">1NT18IS110</h1><br/>
+  <h2 id='nam'>POOJA D S</h2>
+<input type="text" id="name" placeholder="enter your text here">
+<input type="submit"id="submit" value="submit" ><br/><br/>
+<input type="text" id="output" placeholder="you will get result here!!" style="font-size: 2em;font-weight: bold;" >
+
+<script>
+ let submit=document.getElementById('submit');
+ submit.addEventListener('click',()=>{//click,mouseover,keydown,mouseout
+   let data=document.getElementById('name').value;
+   console.log(data);
+   document.getElementById('output').value=data;
+   alert("heyy you entered the text");
+ });
+    </script>
+
+<!-- <button type="button" onclick="document.getElementById('nam').innerHTML='heyy youu'">Click mee</button> -->
+
+</body>
+</html>
