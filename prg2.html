@@ -1,0 +1,103 @@
+<!-- Title : Casel program -->
+<!-- Description : Create a Casel,Court,Danger divisions one inside another.
+                  when user places cursor over it it Should print on console in which section he entered.
+                Path is kept so that user can escape the danger section. -->
+<!-- Author : Pooja D S-->
+<!-- Date : 07/04/2021  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program 2</title>
+    <style>
+        .casel{
+            width: 320px;
+  padding: 10px;
+  background-color: brown;
+  width: 12cm;
+  height:12cm;
+  margin: 0;
+  margin:4cm;
+        }
+        .court{
+            padding: 10px;
+  background-color:yellow;
+  width: 8cm;
+  height:8cm;
+  margin-top: 2cm;
+  margin-left: 2cm;}
+
+  .danger{
+    padding: 10px;
+  background-color:red;
+  width: 4cm;
+  height:4cm;
+  margin-top: 2cm;
+  margin-left: 2cm;
+  }
+  .path{
+      background-color: green;
+      width:5cm;
+      height:1cm;
+      margin-left: 4.25cm;
+      margin-top: 2cm;
+
+  }
+
+    </style>
+</head>
+<body>
+    <div class="casel" id="casel">
+        <div class="court" id="court">
+            <div class ="danger" id="danger">
+                <div class="path" id="path">
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let c=document.getElementById('casel');
+            c.addEventListener('click',e=>{
+                if(e.target.matches('#casel')){
+                    c.style.backgroundColor="black";
+                    console.log("you entered into casel");
+                };
+            });
+            // let p1=document.getElementById('path');
+            // p1.addEventListener('dblclick',e=>{
+            //     if(e.target.matches('#path')){
+            //         p1.remove();
+            //     };
+            // });
+
+            let co=document.getElementById('court');
+            co.addEventListener('click',e=>{
+                if(e.target.matches('#court')){
+                    console.log("you entered into court");
+                    co.style.backgroundColor="purple";
+                };
+            });
+            let d=document.getElementById('danger');
+            d.addEventListener('click',e=>{
+                if(e.target.matches('#danger')){
+                    console.log("you entered danger zone");
+                    d.style.borderRadius="100%"
+                };
+            });
+            let p=document.getElementById('path');
+            p.addEventListener('click',e=>{
+                if(e.target.matches('#path')){
+                    console.log("going through the path");
+                    p.style.backgroundColor="white";
+                    m=document.createElement()
+                    document.append(m);
+                    m.style.backgroundColor="black";
+                    m.style.width="2px";
+                    m.style.height="2px";
+                };
+            });
+            </script>
+</body>
+</html>

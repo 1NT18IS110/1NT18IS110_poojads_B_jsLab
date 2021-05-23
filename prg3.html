@@ -1,0 +1,180 @@
+<!-- Title : Create a game of your own  -->
+<!-- Description : name of the game is write any alphabet
+                    there are many boxes.
+                    once users clicks on it its color and shape gets changed.
+                user can write any alphabet he wish. -->
+<!-- Author : Pooja D S-->
+<!-- Date : 14/04/2021  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        .main{
+            background-color: black;
+            padding:1cm;
+        width: 9.5cm;
+        height: 15;
+        border-color:red;
+        border-style: solid;
+        flex-direction: row;
+        display: flex;
+        flex-grow: 1;
+        margin:8px
+        
+        }
+.one{
+        flex-direction: column;
+        display: flex;
+       
+}
+#box1,#box2,#box3,#box4,#box5,#box6,#box7,#box8,#box9,#box10{
+    background-color: lavenderblush;
+    width:3cm;
+    height:3cm;
+    /* flex-direction: row; */
+    display: flex;
+    /* border-width: 0.25cm; */
+    border-color: red;
+    border-style: solid;
+    border-bottom-style: none;
+    border-right-style: none;
+    
+}
+#box11,#box12,#box13,#box14,#box15{
+    background-color: lavenderblush;
+    width:3cm;
+    height:3cm;
+    /* flex-direction: row; */
+    display: flex;
+    /* border-width: 0.25cm; */
+    border-color: red;
+    border-style: solid;
+    border-bottom-style: none;
+    /* border-right-style: none; */
+    
+}
+#box5,#box10,#box15{
+    border-bottom-style: solid;
+}
+
+
+
+
+    </style>
+    
+</head>
+<body>
+<center>
+    <h2>WRITE ANY ALPHABET</h2>
+    <div class="main">
+    <div  class="one" id="one">
+        <div id="box1" class="box1"></div>
+        <div id="box2" class="box2"></div>
+        <div id="box3" class="box3"></div>
+        <div id="box4" class="box4"></div>
+        <div id="box5" class="box5"></div>
+    </div>
+    <div  class="two" id="two">
+        <div id="box6" class="box1"></div>
+        <div id="box7" class="box2"></div>
+        <div id="box8" class="box3"></div>
+        <div id="box9" class="box4"></div>
+        <div id="box10" class="box5"></div>
+    </div>
+    <div  class="three" id="three">
+        <div id="box11" class="box1"></div>
+        <div id="box12" class="box2"></div>
+        <div id="box13" class="box3"></div>
+        <div id="box14" class="box4"></div>
+        <div id="box15" class="box6"></div>
+    </div>
+    </div>
+</center>
+<script>
+    const elements=[];
+    let a=document.querySelectorAll(".box1");
+    a.forEach(div=>{
+        div.addEventListener('click',e=>{
+            div.style.backgroundColor="green";
+            div.style.borderRadius="50%";
+        });
+    });
+    let a1=document.querySelectorAll(".box1");
+    a1.forEach(div=>{
+        div.addEventListener('dblclick',e=>{
+            div.remove();
+        });
+    });
+    let b=document.querySelectorAll(".box2");
+    b.forEach(div=>{
+        div.addEventListener('click',e=>{
+            div.style.backgroundColor="green";
+            div.style.borderRadius="50%";
+            elements.push(div);
+        });
+    });
+    let b1=document.querySelectorAll(".box2");
+    b1.forEach(div=>{
+        div.addEventListener('dblclick',e=>{
+            div.remove();
+        });
+    });
+    let c=document.querySelectorAll(".box3");
+    c.forEach(div=>{
+        div.addEventListener('click',e=>{
+            div.style.backgroundColor="green";
+            div.style.borderRadius="50%";
+            elements.push(div);
+        });
+    });
+    let c1=document.querySelectorAll(".box3");
+    c1.forEach(div=>{
+        div.addEventListener('dblclick',e=>{
+            div.remove();
+        });
+    });
+    let d=document.querySelectorAll(".box4");
+    d.forEach(div=>{
+        div.addEventListener('click',e=>{
+            div.style.backgroundColor="green";
+            div.style.borderRadius="50%";
+            elements.push(div);
+        });
+    });
+    let d1=document.querySelectorAll(".box4");
+    d1.forEach(div=>{
+        div.addEventListener('dblclick',e=>{
+            div.remove();
+        });
+    });
+    let e=document.querySelectorAll(".box5");
+    e.forEach(div=>{
+        div.addEventListener('click',e=>{
+            div.style.backgroundColor="green";
+            div.style.borderRadius="50%";
+            elements.push(div);
+        });
+    });
+    let e1=document.querySelectorAll(".box5");
+    e1.forEach(div=>{
+        div.addEventListener('dblclick',e=>{
+            div.remove();
+        });
+    });
+    let f=document.getElementById("box15");
+    f.addEventListener('click',e=>{
+        f.style.backgroundColor="green";
+        f.style.borderRadius="50%";
+        elements.push(f);
+     });
+     let f1=document.getElementById("box15");
+    f1.addEventListener('dblclick',e=>{
+       f1.remove();
+    });
+</script>
+</body>
+</html>

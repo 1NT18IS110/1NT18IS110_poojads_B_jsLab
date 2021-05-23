@@ -1,0 +1,42 @@
+<!-- Title : Create a page to know the array concept  -->
+<!-- Description : create a div.
+                  when he press the the div new div should be created below the previous div.
+                and the new div should be pushed into array
+            that can be seen in console.  -->
+<!-- Author : Pooja D S-->
+<!-- Date : 21/04/2021  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prg4</title>
+    <style>
+        .div{
+            width: 5cm;
+            height: 5cm;
+            background-color: crimson;
+
+}
+    </style>
+    
+</head>
+<body>
+    <div id="division" class="div">
+
+    </div>
+    <script>
+        const elements=[];
+        let c=document.getElementById("division");
+        c.addEventListener('click',e=>{
+            const newDiv=document.createElement("div");
+            c.append(newDiv);
+            newDiv.style.backgroundColor="black";
+            newDiv.style.width="1cm";
+            newDiv.style.height="1cm";
+            elements.push(newDiv);
+        });
+    </script>
+</body>
+</html>
