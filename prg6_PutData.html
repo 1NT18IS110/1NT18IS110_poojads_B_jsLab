@@ -1,0 +1,32 @@
+<!-- Title : Page to upload and fetch data  -->
+<!-- Description : collect info required using a web interface.
+                    and provide the functionality to
+                    search the user details based on the id.-->
+<!-- Author : Pooja D S-->
+<!-- Date : 26/05/2021  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="id"placeholder="enter id of movie">
+    <input type="text" id="name" placeholder="enter movie name">
+    <input type="text" id="hero" placeholder="enter hero of the movie" >
+    <input type="text" id="heroine" placeholder="enter heroine of the movie" >
+    <input type="text" id="villian" placeholder="enter villian of the movie" ><br><br>
+    <center><input type="submit" value="Upload your Data" onclick="putData()"><br><br></center><br><br>
+        <center>
+
+            <h1>~:Search your data here:~</h1>
+            <input type="text" placeholder="write movie name" id="get_name">
+            <input type="submit" value="Get Data" onclick="getData()"><br><br>
+            <textarea id="output"rows="10" cols="10"style="width:500px;height:9cm" id="output"></textarea>
+        </center>
+        <script src="prg6_webInterface.js"></script>
+
+</body>
+</html>
