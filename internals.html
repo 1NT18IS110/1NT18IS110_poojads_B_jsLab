@@ -1,0 +1,107 @@
+<!-- take the input as salary.
+if salary is greater than 100000 then he is not economically backward people.
+else ask  their name.
+occupation.
+food source.
+water source.
+
+display the health tips along with water cleaning, food quality etc. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .results{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>Health tips for economically backward people</h1>
+    <h4> enter your income</h4>
+    <input type="number" placeholder="Income" id="income">
+    <input type="submit" value="submit" id="submit"><br><br>
+    <div class="results" id="result">
+        <h3>Please enter your name</h3>
+        <input type="text" name="" id="name"><br>
+        <h3>Please enter your living area(slum, village, town)</h3>
+        <input type="text" id="area">
+        <input type="submit" value="I am sure" id="submit2">
+    </div>
+    <br><br>
+    <div class="results" id="result2">
+        <input type="text" placeholder="enter water source" id="source"><br><br>
+        <input type="submit" placeholder="I Agree"id="submit3">
+    </div>
+    
+    <div class=""></div>
+    <input type="submit" value='See all the data'id="data"><br><br>
+    <textarea name="text" id="textarea" cols="30" rows="10"></textarea>
+    <script>
+        var array=[];
+        var object={};
+        let  submit=document.getElementById('submit');
+        let division=document.getElementById('result');
+        submit.addEventListener('click',()=>{
+            let salary=document.getElementById('income').value;
+            object.salary=salary;
+            if(salary>=15000){
+                var h3 = document.createElement("H3");
+                        h3.append("Sorry you will not come under backward people. Still there are some tips for you.")
+                        h3.append("Measure and Watch Your Weight.Limit Unhealthy Foods and Eat Healthy Meals.Take Multivitamin Supplements.Drink Water and Stay Hydrated, and Limit Sugared Beverages.")
+                        document.body.appendChild(h3);
+            }
+            else{
+                 division.style.visibility='visible';
+                 let name=document.getElementById('name').value;
+                
+                    let t = document.createTextNode(name);
+                    division.append(t);
+
+                var submit2=document.getElementById('submit2');
+                division2=document.getElementById('result2')
+                submit2.addEventListener('click',()=>{
+                    var living=document.getElementById('area').value;
+                    let name=document.getElementById('name').value;
+                    object.name=name;
+                    object.living_area=living;
+                    if (living!="slum"){
+                        var h3 = document.createElement("H3");
+                        h3.append("Measure and Watch Your Weight.Limit Unhealthy Foods and Eat Healthy Meals.Take Multivitamin Supplements.Drink Water and Stay Hydrated, and Limit Sugared Beverages.")
+                        document.body.append(h3);
+                    }
+                    else{
+                        division2.style.visibility='visible';
+                        submit3.addEventListener('click',()=>{
+                    
+                        var submit3=document.getElementById('submit3');
+                        var h3 = document.createElement("H3");
+                        var water=document.getElementById('source').value;
+                        object.water_source=water;
+                        h3.append("Measure and Watch Your Weight.Limit Unhealthy Foods and Eat Healthy Meals.Take Multivitamin Supplements.Drink Water and Stay Hydrated, and Limit Sugared Beverages.")
+                        h3.append("Cover the container to keep water free from insects and dust. Clean the container and change the water regularly. 5. Always wash hands with water and soap or ash before preparing food, eating or feeding little children, and after defecating or handling the waste of children or people who are sick.");
+                        document.body.append(h3);
+                        });
+
+                }
+            })
+                }
+            
+        })
+        array.push(object);
+            console.log(array);
+            let data =document.getElementById('data');
+            data.addEventListener('click',() =>{
+                string_data=JSON.stringify(array);
+                document.getElementById('textarea').value=string_data;
+
+            })
+    </script>
+</body>
+
+</html>
